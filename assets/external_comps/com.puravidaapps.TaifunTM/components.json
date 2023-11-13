@@ -1,0 +1,157 @@
+[{
+ "categoryString": "EXTENSION",
+ "dateBuilt": "2020-10-13T10:49:21-0600",
+ "nonVisible": "true",
+ "iconName": "https://puravidaapps.com/images/taifun16.png",
+ "methods": [
+  {
+   "deprecated": "false",
+   "name": "CellId",
+   "description": "Return the base station cell id. In case the cell location is not available, 0 will be returned. For LTE, Android version must be min. Android 4.2 (API 17). The information provided is carrier dependent.",
+   "params": [],
+   "returnType": "number"
+  },
+  {
+   "deprecated": "false",
+   "name": "CountryIsoCode",
+   "description": "Get list of two-chars country ISO codes from phone code. Several countries may match the same code.",
+   "params": [{
+    "name": "phoneCode",
+    "type": "text"
+   }],
+   "returnType": "any"
+  },
+  {
+   "deprecated": "false",
+   "name": "DeviceId",
+   "description": "Returns the IMEI/MEID of the device. If the device is a GSM device then IMEI will be returned and if the device is a CDMA device then MEID will be returned. In case of tablets or devices which can't act as Mobile Phone, IMEI will be null.",
+   "params": [],
+   "returnType": "text"
+  },
+  {
+   "deprecated": "false",
+   "name": "Lac",
+   "description": "Return the base station LAC. In case the cell location is not available, 0 will be returned. For LTE the Tracking Area Code will be provided, Android version must be min. Android 4.2 (API 17). The information provided is carrier dependent.",
+   "params": [],
+   "returnType": "number"
+  },
+  {
+   "deprecated": "false",
+   "name": "NetworkCountryIsoCode",
+   "description": "Return the registered network operator's two-chars country code. In case of tablets or devices which can't act as Mobile Phone, this will be null.",
+   "params": [],
+   "returnType": "text"
+  },
+  {
+   "deprecated": "false",
+   "name": "NetworkOperator",
+   "description": "Return the MCC + MNC of the registered network operator. In case of tablets or devices which can't act as Mobile Phone, this will be null.",
+   "params": [],
+   "returnType": "text"
+  },
+  {
+   "deprecated": "false",
+   "name": "NetworkOperatorName",
+   "description": "Return the registered network operator's name. In case of tablets or devices which can't act as Mobile Phone, this will be null.",
+   "params": [],
+   "returnType": "text"
+  },
+  {
+   "deprecated": "false",
+   "name": "NetworkType",
+   "description": "Return the network type for the current data connection. Possible values: 1xRTT, CDMA, EDGE, EHRPD, EVDO_0, EVDO_A, EVDO_B, GPRS, GSM, HSDPA, HSPA, HSPAP, HSUPA, IDEN, IWLAN, LTE, NR, TD_SCDMA, UMTS, UNKNOWN.",
+   "params": [],
+   "returnType": "text"
+  },
+  {
+   "deprecated": "false",
+   "name": "PhoneCode",
+   "description": "Get phonecode from two-chars country ISO code. For example country=US provides 1, country=IT provides 39. The country ISO code will automatically be converted into upper case.",
+   "params": [{
+    "name": "countryIsoCode",
+    "type": "text"
+   }],
+   "returnType": "text"
+  },
+  {
+   "deprecated": "false",
+   "name": "PhoneNumber",
+   "description": "Return the device phone number (MSISDN). In case of tablets or devices which can't act as Mobile Phone, phone number will be null.",
+   "params": [],
+   "returnType": "text"
+  },
+  {
+   "deprecated": "false",
+   "name": "SimCountryIsoCode",
+   "description": "Return the SIM operator's two-chars country ISO code. In case of tablets or devices which can't act as Mobile Phone, this will be null.",
+   "params": [],
+   "returnType": "text"
+  },
+  {
+   "deprecated": "false",
+   "name": "SimOperator",
+   "description": "Return the SIM operator's MNC + MCC number. In case of tablets or devices which can't act as Mobile Phone, this will be null.",
+   "params": [],
+   "returnType": "text"
+  },
+  {
+   "deprecated": "false",
+   "name": "SimSerialNumber",
+   "description": "Return the SIM Serial Number. In case of tablets or devices which can't act as Mobile Phone, this will be null.",
+   "params": [],
+   "returnType": "text"
+  },
+  {
+   "deprecated": "false",
+   "name": "StartSignalStrengthListener",
+   "description": "start the listener.",
+   "params": []
+  },
+  {
+   "deprecated": "false",
+   "name": "StopSignalStrengthListener",
+   "description": "stop the listener.",
+   "params": []
+  }
+ ],
+ "blockProperties": [
+  {
+   "rw": "read-only",
+   "deprecated": "false",
+   "name": "SignalStrengthAsu",
+   "description": "Return the signal strength in asu for WCDMA, CDMA, GSM or LTE network modes.",
+   "type": "number"
+  },
+  {
+   "rw": "read-only",
+   "deprecated": "false",
+   "name": "SignalStrengthDbm",
+   "description": "Return the signal strength in dBm for WCDMA, CDMA, GSM or LTE network modes.",
+   "type": "number"
+  }
+ ],
+ "helpUrl": "",
+ "type": "com.puravidaapps.TaifunTM",
+ "androidMinSdk": 7,
+ "version": "7",
+ "external": "true",
+ "showOnPalette": "true",
+ "name": "TaifunTM",
+ "helpString": "Extension to get some information from the telephony manager.Version 7 as of 2020-10-13.",
+ "properties": [],
+ "events": [{
+  "deprecated": "false",
+  "name": "SignalStrengthChanged",
+  "description": "Event indicating that signal strength has changed. Note: This event fires only for GSM and CDMA! Signal Strength is provided in dBm and asu.",
+  "params": [
+   {
+    "name": "dBm",
+    "type": "number"
+   },
+   {
+    "name": "asu",
+    "type": "number"
+   }
+  ]
+ }]
+}]
